@@ -48,7 +48,7 @@ const handleLogin = async () => {
         >
           MOTOGURO
         </h1>
-        <p class="text-text-muted">Sign in to manage your business</p>
+        <p class="text-text-muted">Login untuk masuk ke dalam aplikasi</p>
       </div>
 
       <div class="bg-surface border border-border rounded-xl p-8 shadow-lg">
@@ -57,7 +57,7 @@ const handleLogin = async () => {
             v-model="email"
             type="email"
             label="Email"
-            placeholder="admin@motoguro.com"
+            placeholder="Masukan Email"
             class="w-full"
           />
 
@@ -65,7 +65,7 @@ const handleLogin = async () => {
             v-model="password"
             type="password"
             label="Password"
-            placeholder="••••••••"
+            placeholder="Masukan Password"
             class="w-full"
           />
 
