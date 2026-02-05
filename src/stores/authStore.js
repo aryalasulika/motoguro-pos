@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { createAuthClient } from "better-auth/vue"
 
 const authClient = createAuthClient({
-    baseURL: "https://backend-motoguro.vercel.app"
+    baseURL: "https://api.motoguro.tech"
 })
 
 export const useAuthStore = defineStore('auth', () => {

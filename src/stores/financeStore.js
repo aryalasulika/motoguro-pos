@@ -5,7 +5,7 @@ import axios from 'axios'
 
 // Create axios instance with credentials for cookie handling
 const api = axios.create({
-  baseURL: 'https://backend-motoguro.vercel.app/api',
+  baseURL: 'https://api.motoguro.tech/api',
   withCredentials: true
 })
 
