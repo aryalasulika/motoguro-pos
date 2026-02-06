@@ -202,7 +202,6 @@ const handleCheckout = () => {
         <CheckCircle2 size="24" />
         <div>
           <h4 class="font-bold">Transaction Saved!</h4>
-          <p class="text-sm">Total: {{ formatCurrency(totalAmount) }}</p>
         </div>
       </div>
     </Transition>

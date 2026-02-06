@@ -16,6 +16,7 @@ import {
   X,
   Save,
   Wallet,
+  RotateCcw,
 } from "lucide-vue-next";
 import {
   format,
@@ -100,6 +101,14 @@ const formatDate = (dateString) => {
   return format(new Date(dateString), "dd MMM yyyy, HH:mm");
 };
 
+const resetFilters = () => {
+  searchQuery.value = "";
+  filterType.value = "all";
+  const today = new Date().toISOString().slice(0, 10);
+  startDate.value = today;
+  endDate.value = today;
+};
+
 const deleteTransaction = async (id) => {
   if (confirm("Are you sure you want to delete this transaction?")) {
     await financeStore.deleteTransaction(id);
@@ -135,7 +144,7 @@ const saveEdit = async () => {
 <template>
   <AppLayout>
     <div class="space-y-6">
-      <div class="flex flex-col md:flex-row gap-4 justify-between items-end">
+      <div class="flex flex-col gap-4">
         <div>
           <h1 class="text-2xl font-bold text-text-primary">
             Transaction History
@@ -193,6 +202,18 @@ const saveEdit = async () => {
                 class="w-full pl-10 pr-4 py-2 bg-background border border-border rounded-xl focus:outline-none focus:border-primary text-text-primary placeholder:text-text-muted h-[42px]"
               />
             </div>
+          </div>
+
+          <!-- Reset Button -->
+          <div class="flex flex-col">
+            <label class="text-xs text-text-muted ml-1">&nbsp;</label>
+            <button
+              @click="resetFilters"
+              class="px-4 py-2 bg-background border border-border rounded-xl hover:bg-surface-hover text-text-muted hover:text-primary transition-colors h-[42px] flex items-center justify-center"
+              title="Reset Filters"
+            >
+              <RotateCcw size="20" />
+            </button>
           </div>
         </div>
       </div>

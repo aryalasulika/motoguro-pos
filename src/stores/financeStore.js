@@ -5,6 +5,8 @@ import axios from 'axios'
 
 // Create axios instance with credentials for cookie handling
 const api = axios.create({
+  // baseURL: 'http://localhost:3000/api',
+  // withCredentials: true
   baseURL: 'https://api.motoguro.tech/api',
   withCredentials: true
 })

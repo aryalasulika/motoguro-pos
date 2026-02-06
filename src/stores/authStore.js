@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { createAuthClient } from "better-auth/vue"
 
 const authClient = createAuthClient({
+    // baseURL: "http://localhost:3000"
     baseURL: "https://api.motoguro.tech"
 })
 
